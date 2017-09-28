@@ -7,29 +7,24 @@ using System.Threading.Tasks;
 
 namespace BandSite.Models
 {
-    public class Order
+    public class ThreadPost
     {
         [Key]
-        public int OrderId { get; set; }
+        public int ThreadPostId { get; set; }
+
+        [Required]
+        public string message { get; set; }
 
         [Required]
         public ApplicationUser user { get; set; }
 
+        [Required]
         [DataType(DataType.Date)]
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime DateCreated { get; set; }
 
-
-        [Display(Name ="Payment Type")]
-        public int? paymentType { get; set; }
-        public PaymentType PaymentType { get; set; }
-
-        [Display(Name ="Shipping Address")]
-        public int? shippingAddress { get; set; }
-        public ShippingAddress ShippingAddress{ get; set; }
-
-        public ICollection<OrderProduct> OrderProduct { get; set; }
-
-
+        [Required]
+        public int ForumId { get; set; }
+        public Forum Forum { get; set; }
     }
 }
