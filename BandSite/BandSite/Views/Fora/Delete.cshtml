@@ -1,0 +1,41 @@
+@model BandSite.Models.Forum
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Forum</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <input type="hidden" asp-for="ForumId" />
+        <dt>
+            @Html.DisplayNameFor(model => model.ForumTitle)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ForumTitle)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ForumMessage)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ForumMessage)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateCreated)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateCreated)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </form>
+</div>
