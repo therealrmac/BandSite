@@ -16,5 +16,7 @@ namespace BandSite.Models
         [StringLength(25, ErrorMessage = "Product Name can not be more than 25 characters")]
         [Display(Name = "Product Category")]
         public string CategoryName { get; set; }
+
+        public ICollection<Product> Product { get; set; }
     }
 }

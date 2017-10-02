@@ -18,7 +18,7 @@ namespace BandSite.Models
 
         [Required]
         [DisplayFormat(DataFormatString = "{0:C}")]
-        public int Price { get; set; }
+        public double Price { get; set; }
 
         [Required]
         [Display(Name = "Product Quantity")]
@@ -33,13 +33,14 @@ namespace BandSite.Models
         [Required]
         [Display(Name = "Product Category")]
         public int ProductTypeID { get; set; }
+        public ProductType ProductTypes { get; set; }
 
         [Required]
         [DataType(DataType.Date)]
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime DateCreated { get; set; }
 
-        public ProductType ProductTypes { get; set; }
+        
 
         public ICollection<OrderProduct> OrderProduct { get; set; }
     }
