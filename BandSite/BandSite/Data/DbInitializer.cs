@@ -50,7 +50,7 @@ namespace BandSite.Data
                     new Product
                     {
                         Description= "Left To The Wolves all black shirt and logo",
-                        Image= "",
+                        Image= "http://images.bigcartel.com/product_images/179538878/12007234_10208094762703254_549503210_n_%282%29.jpg?auto=format&fit=max&w=560",
                         Name="Shirt1",
                         Price= 15.99,
                         ProductTypeID= 17,
@@ -59,7 +59,7 @@ namespace BandSite.Data
                     new Product
                     {
                         Description= "Left To The Wolves with unique design",
-                        Image= "",
+                        Image= "http://images.bigcartel.com/product_images/172798903/20160131_145912.jpg?auto=format&fit=max&w=560",
                         Name="Shirt2",
                         Price= 15.99,
                         ProductTypeID= 17,
@@ -68,7 +68,7 @@ namespace BandSite.Data
                     new Product
                     {
                         Description= "Left To The Wolves murder lady",
-                        Image= "",
+                        Image= "http://images.bigcartel.com/product_images/172798885/20160131_150732.jpg?auto=format&fit=max&w=560",
                         Name="Shirt3",
                         Price= 15.99,
                         ProductTypeID= 17,
@@ -77,7 +77,7 @@ namespace BandSite.Data
                     new Product
                     {
                         Description= "Left To The Wolves all white shirt and logo",
-                        Image= "",
+                        Image= "http://images.bigcartel.com/product_images/179538659/left_to_the_wolves-shiva-blue-shirt.jpg?auto=format&fit=max&w=560",
                         Name="Shirt4",
                         Price= 15.99,
                         ProductTypeID= 17,
@@ -86,7 +86,7 @@ namespace BandSite.Data
                     new Product
                     {
                         Description="Left To The Wolves album",
-                        Image= "",
+                        Image= "http://images.bigcartel.com/product_images/88007558/Album_Cover.jpg?auto=format&fit=max&h=1000&w=1000",
                         Name= "CD1",
                         Price= 10.99,
                         ProductTypeID= 19,
@@ -95,7 +95,7 @@ namespace BandSite.Data
                     new Product
                     {
                         Description= "Left To The Wolves album",
-                        Image= "",
+                        Image= "https://pbs.twimg.com/media/CYcKK4VWYAAQNck.jpg",
                         Name= "CD2",
                         Price= 9.99,
                         ProductTypeID= 19,
@@ -104,11 +104,20 @@ namespace BandSite.Data
                     new Product
                     {
                         Description= "Left To The Wolves album",
-                        Image= "",
+                        Image= "https://gp1.wac.edgecastcdn.net/802892/http_public_production/artists/images/1443095/original/hash:1467158494/1390065673_cabin_lttw.jpg?1467158494",
                         Name="CD3",
                         Price= 10.99,
                         ProductTypeID= 19,
                         Quantity= 30
+                    },
+                    new Product
+                    {
+                        Description= "Left to The Wolves hoody",
+                        Image= "http://images.bigcartel.com/product_images/134915727/IMG_20140330_210856.jpg?auto=format&fit=max&h=1000&w=1000",
+                        Name= "Hoody1",
+                        Price= 25.00,
+                        ProductTypeID= 20,
+                        Quantity= 10
                     }
                 };
                 foreach (Product x in product)
