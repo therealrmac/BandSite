@@ -21,6 +21,24 @@ textarea {
     max-height: 150px;
 }
 
+.fbicon {
+    height: 35px;
+    margin-right: 4px;
+    margin-left: 4px;
+
+}
+.MyCard {
+    text-align: center;
+    cursor: pointer;
+    margin: 6%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.bioPic {
+    margin: auto;
+    max-width: 75%;
+}
+
+
 /* Carousel */
 .carousel-caption p {
     font-size: 20px;
