@@ -7,17 +7,22 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BandSite.Data;
 using BandSite.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace BandSite.Controllers
 {
     public class ForaController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public ForaController(ApplicationDbContext context)
+        public ForaController(ApplicationDbContext context, UserManager<ApplicationUser> userManager )
         {
-            _context = context;    
+            _context = context;
+            _userManager = userManager;
         }
+
+        private Task<ApplicationUser> GetCurrentUserAsync() => _userManager.GetUserAsync(HttpContext.User);
 
         // GET: Fora
         public async Task<IActionResult> Index()
@@ -44,9 +49,13 @@ namespace BandSite.Controllers
         }
 
         // GET: Fora/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create(int? id)
         {
-            return View();
+            var forum = new Forum();
+            var user = await GetCurrentUserAsync();
+            forum.ForumId = (int)id;
+            
+            return View(forum);
         }
 
         // POST: Fora/Create

@@ -23,6 +23,7 @@ namespace BandSite.Models
         [Required]
         public string Twitter { get; set; }
 
-
+        [Required]
+        public string Image { get; set; }
     }
 }

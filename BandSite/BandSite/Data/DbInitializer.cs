@@ -133,43 +133,49 @@ namespace BandSite.Data
                     {
                         Name= "Andy Yates",
                         Bio= "",
-                        Facebook= "",
-                        Twitter= ""
+                        Facebook= "https://www.facebook.com/andy.yates.c2c",
+                        Twitter= "",
+                        Image = "https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/13895077_1342001795829237_1980520063897551604_n.jpg?oh=b4c049e5e5c6d45a93086199566855f9&oe=5A78FFF3"
                     },
                     new Members
                     {
-                        Name ="Danny",
+                        Name ="Daniel Brown",
                         Bio= "",
-                        Facebook= "",
-                        Twitter=""
+                        Facebook= "https://www.facebook.com/daniel.brown.31924792",
+                        Twitter="",
+                        Image = "https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/13902736_10209901331631635_81218155356043826_n.jpg?oh=f4bcb0b8f99aac2f6deea5347cd5e5db&oe=5A818CDB"
                     },
                     new Members
                     {
-                        Name= "Jordan",
+                        Name= "Jordan Fields",
                         Bio= "",
-                        Facebook= "",
-                        Twitter= ""
+                        Facebook= "https://www.facebook.com/jordan.s.fields?lst=100000159441082%3A100000662620001%3A1507941260",
+                        Twitter= "",
+                        Image= "https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/17103527_1500130823352324_8620897397958900742_n.jpg?oh=5aa79c1c299b876728ff43c0849c3270&oe=5A81D844"
                     },
                     new Members
                     {
                         Name= "Anthony Scott",
                         Bio= "",
-                        Facebook= "",
-                        Twitter= ""
+                        Facebook= "https://www.facebook.com/profile.php?id=100001492597701",
+                        Twitter= "",
+                        Image= "https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/21764924_1567218056671266_2216548639073722149_n.jpg?oh=01ae445350dabc18b922e7a44a1913eb&oe=5A6DE449"
                     },
                     new Members
                     {
-                        Name= "Chris Ryan",
+                        Name= "Chris Obryan",
                         Bio= "",
-                        Facebook= "",
+                        Facebook= "https://www.facebook.com/chris.obryan.31",
                         Twitter= "",
+                        Image= "https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/12250159_10207257860661226_5729887630947880619_n.jpg?oh=91f549c2f088280898fd0da427c5b03f&oe=5A6CECC4"
                     },
                     new Members
                     {
                         Name= "Preston Soper",
                         Bio= "",
-                        Facebook= "",
-                        Twitter= ""
+                        Facebook= "https://www.facebook.com/preston.soper.9",
+                        Twitter= "",
+                        Image= "https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/15349560_211070119347919_689428087339021411_n.jpg?oh=42703699ff9935ece52f55362aee2c02&oe=5A7390B7"
                     }
                 };
                 foreach(Members x in members)
