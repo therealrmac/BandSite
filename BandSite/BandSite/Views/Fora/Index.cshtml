@@ -28,11 +28,11 @@
 @foreach (var item in Model) {
         <tr>
             <td>
+                <a asp-controller="ThreadPosts" asp-action="Index" asp-route-id="@item.ForumId">
                 @Html.DisplayFor(modelItem => item.ForumTitle)
+                    </a>
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ForumMessage)
-            </td>
+
             <td>
                 @Html.DisplayFor(modelItem => item.DateCreated)
             </td>

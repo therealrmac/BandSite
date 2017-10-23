@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using BandSite.Data;
 using BandSite.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BandSite.Controllers
 {
@@ -49,11 +50,11 @@ namespace BandSite.Controllers
         }
 
         // GET: Fora/Create
-        public async Task<IActionResult> Create(int? id)
+        public async Task<IActionResult> Create()
         {
             var forum = new Forum();
             var user = await GetCurrentUserAsync();
-            forum.ForumId = (int)id;
+       
             
             return View(forum);
         }
@@ -63,14 +64,20 @@ namespace BandSite.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ForumId,ForumTitle,ForumMessage,DateCreated")] Forum forum)
+        [Authorize]
+        public async Task<IActionResult> Create(Forum forum)
         {
+            ModelState.Remove("User");
             if (ModelState.IsValid)
             {
+                var user = await GetCurrentUserAsync();
+                forum.user = user;
                 _context.Add(forum);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", new { id = forum.ForumId });
             }
+            ViewData["ForumId"] = new SelectList(_context.Forum, "ForumId", "ForumId", forum.ForumId);
+          
             return View(forum);
         }
 
