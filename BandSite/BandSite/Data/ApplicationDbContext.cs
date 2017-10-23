@@ -51,5 +51,8 @@ namespace BandSite.Data
         public DbSet<BandSite.Models.ThreadPost> ThreadPost { get; set; }
 
         public DbSet<BandSite.Models.Members> Members { get; set; }
+
+        public DbSet<BandSite.Models.OrderProduct> OrderProduct { get; set; }
+        
     }
 }
