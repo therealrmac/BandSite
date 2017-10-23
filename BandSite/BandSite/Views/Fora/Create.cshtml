@@ -8,7 +8,7 @@
 
 <form asp-action="Create">
     <div class="form-horizontal">
-        <h4>Forum</h4>
+        <h4>Thread</h4>
         <hr />
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <div class="form-group">
@@ -18,11 +18,13 @@
                 <span asp-validation-for="ForumTitle" class="text-danger"></span>
             </div>
         </div>
+
+        <input type="hidden" asp-for="ForumId" />
+
         <div class="form-group">
             <label asp-for="ForumMessage" class="col-md-2 control-label"></label>
             <div class="col-md-10">
-                <input asp-for="ForumMessage" class="form-control" />
-                <span asp-validation-for="ForumMessage" class="text-danger"></span>
+                <textarea asp-for="ForumMessage" class="form-control"></textarea>
             </div>
         </div>
         <div class="form-group">

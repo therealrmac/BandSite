@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BandSite.Data;
 using BandSite.Models;
+using BandSite.Models.ViewModels;
 
 namespace BandSite.Controllers
 {
@@ -20,8 +21,16 @@ namespace BandSite.Controllers
         }
 
         // GET: ThreadPosts
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? id)
         {
+            ThreadPostViewModel threadpostVM = new ThreadPostViewModel();
+            if(id == null)
+            {
+                return NotFound();
+            }
+            threadpostVM.threadpost = await _context.ThreadPost.Include(x => x.Forum).Include(u => u.user).Where(t => t.ForumId == (int)id).ToListAsync();
+            
+
             var applicationDbContext = _context.ThreadPost.Include(t => t.Forum);
             return View(await applicationDbContext.ToListAsync());
         }
