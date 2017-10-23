@@ -11,7 +11,7 @@
 {
     
     <p class="col-md-4 MyCard">
-            <img src="@item.Image" alt="images" class="bioPic" />
+            <img data-toggle="modal" data-target="@item.Bio" src="@item.Image" alt="images" class="bioPic" />
             <br />
             <span>@item.Name</span>
             <br />
@@ -22,6 +22,13 @@
                     @Html.DisplayFor(modelItem => item.Twitter)
                 </span>
             </p>
+            @*<div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                </button>
+                <h4 class="modal-title">Bio</h4>
+                <p>@item.Bio</p>
+
+            </div>*@
         }
     </div>
     </div>

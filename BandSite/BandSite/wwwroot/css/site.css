@@ -18,7 +18,8 @@ textarea {
 }
 .prodImg{
     max-width: 30%;
-    max-height: 150px;
+    height: auto;
+    margin: auto;
 }
 
 .fbicon {
@@ -36,6 +37,30 @@ textarea {
 .bioPic {
     margin: auto;
     max-width: 75%;
+}
+
+.modal-body img {
+    width: 300px;
+    float: left;
+    margin-right: 15px;
+}
+
+.modal-body p {
+    text-align: justify;
+}
+
+.modal-body #studentBio {
+    margin-bottom: 25px;
+}
+
+@media (max-width: 550px) {
+    .modal-body img {
+        width: 300px;
+        float: none;
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 15px;
+    }
 }
 
 
